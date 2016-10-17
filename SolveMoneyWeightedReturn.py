@@ -25,6 +25,7 @@ def loadData():
 def visit(currentNode, count, metric, data):
     """
     Determines if the given metric produces the intended end value in the inputted number of steps.
+    Lowest possible level of recursion is 10, making this algorithm O(1).
 
     :param currentNode: the value of our current position in the search
     :param count: our current position in the search
@@ -50,7 +51,8 @@ def visit(currentNode, count, metric, data):
 
 
 def BFcheckPercentages():
-    """Uses a BF algorithm to iteratively check the """
+    """Uses a BF algorithm to iteratively check possible MWR metrics.
+    This algorithm operates in O(n) time, n being the size of the metric, assuming that MWR can be larger than 100%"""
 
     data = loadData()
 
